@@ -1,0 +1,18 @@
+
+
+<canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        const background = new Image();
+        background.onload = () => { };
+        background.src = '/workspace/images/origdllogox1.png';
+        function Animate(imgbg) {
+        ctx.clearRect(0, 0, 1920, 100);
+        ctx.drawImage(background, 0, 0, 1920, 100);
+    
+        requestAnimationFrame(Animate);
+        }
+        Animate(canvas);
+    </script>
+</canvas><br>
